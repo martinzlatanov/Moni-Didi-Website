@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Creepster&family=Space+Grotesk:wght@300;400;700&display=swap');
+
+@theme {
+  --font-sans: "Fredoka", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Creepster", system-ui, sans-serif;
+  --font-accent: "Space Grotesk", sans-serif;
+  
+  --color-halloween-orange: #FF914D;
+  --color-halloween-purple: #9D50BB;
+  --color-halloween-dark: #1A0B2E;
+  --color-halloween-green: #7ED957;
+  --color-halloween-light: #FDFBFF;
+  --color-halloween-soft-purple: #F3E8FF;
+}
+
+body {
+  background-color: var(--color-halloween-light);
+  color: var(--color-halloween-dark);
+  font-family: var(--font-sans);
+}
+
+.spooky-text { font-family: var(--font-display); }
+.accent-text { font-family: var(--font-accent); }
+.kids-text { font-family: var(--font-sans); }
