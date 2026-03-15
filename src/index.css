@@ -6,18 +6,18 @@
   --font-sans: "Fredoka", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Creepster", system-ui, sans-serif;
   --font-accent: "Space Grotesk", sans-serif;
-  
-  --color-halloween-orange: #FF914D;
-  --color-halloween-purple: #9D50BB;
-  --color-halloween-dark: #1A0B2E;
-  --color-halloween-green: #7ED957;
-  --color-halloween-light: #FDFBFF;
-  --color-halloween-soft-purple: #F3E8FF;
+
+  --color-festival-orange: #FF914D;
+  --color-festival-purple: #9D50BB;
+  --color-festival-dark: #1A0B2E;
+  --color-festival-green: #7ED957;
+  --color-festival-light: #FDFBFF;
+  --color-festival-soft-purple: #F3E8FF;
 }
 
 body {
-  background-color: var(--color-halloween-light);
-  color: var(--color-halloween-dark);
+  background-color: var(--color-festival-light);
+  color: var(--color-festival-dark);
   font-family: var(--font-sans);
 }
 
