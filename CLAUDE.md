@@ -24,7 +24,17 @@ npm run preview  # preview production build
 
 ## Architecture
 
-Single-page app in `src/App.tsx` — all components are co-located in that one file (Navbar, Hero, ExperienceSection, ScheduleSection, TicketsSection, ContactSection, Footer).
+Single-page app in `src/App.tsx` — all components are co-located in that one file:
+
+| Component | Section ID | Notes |
+|-----------|------------|-------|
+| `Navbar` | — | Fixed top nav, scroll-aware bg, mobile hamburger menu with AnimatePresence |
+| `Hero` | `#home` | Parallax scroll via `useScroll`/`useTransform`; floating animated icons (Star, Wand2, Ghost) |
+| `Experience` + `ExperienceCard` | `#adventures` | 3-card grid: Music Stage, Creative Workshop, Laughter Land |
+| `Lineup` + `LineupItem` | `#lineup` | Time-slot schedule: 14:00 Music Parade → 20:00 Sing-Along |
+| `Tickets` + `TicketCard` | `#tickets` | 3 tiers: SPARK $29, GLOW $49 (featured/Best Value), SHINE $79 |
+| `Contact` | `#contact` | Contact form with `idle \| sending \| success` state machine |
+| `Footer` | — | 4-col grid; social icons: Instagram, Twitter, Facebook |
 
 ### Design tokens
 
@@ -42,3 +52,7 @@ Fonts (Google Fonts, loaded in `index.css`):
 - `font-display` → Creepster (`.spooky-text`)
 - `font-sans` → Fredoka (`.kids-text`)
 - `font-accent` → Space Grotesk (`.accent-text`)
+
+## Known Issues
+
+- `Hero` renders a `<Ghost>` Lucide icon but `Ghost` is **not in the import list** — causes a TypeScript/runtime error. Fix: add `Ghost` to the Lucide import, or replace the element.

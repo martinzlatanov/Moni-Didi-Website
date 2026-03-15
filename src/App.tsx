@@ -8,9 +8,7 @@ import { motion, AnimatePresence, useScroll, useTransform } from 'motion/react';
 import { 
   Sparkles,
   Music,
-  Ticket,
-  Calendar,
-  MapPin,
+  Laugh,
   Instagram,
   Twitter,
   Facebook,
@@ -22,7 +20,6 @@ import {
   Smile,
   Star,
   Wand2,
-  Mic2,
   Music2
 } from 'lucide-react';
 
@@ -204,7 +201,7 @@ const Hero = () => {
         className="absolute top-1/3 right-1/4 opacity-20 hidden lg:block"
       >
         <div className="relative">
-          <Ghost size={70} className="text-white" />
+          <Laugh size={70} className="text-white" />
           {/* Adding a little "fluff" effect with a blurred circle behind */}
           <div className="absolute inset-0 bg-white/20 blur-xl rounded-full -z-10" />
         </div>
